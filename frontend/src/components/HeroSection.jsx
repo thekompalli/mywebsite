@@ -23,9 +23,9 @@ const HeroSection = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-start pt-20" style={{backgroundColor: '#FAFAFA'}}>
       <div className="max-w-7xl mx-auto px-8 lg:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Main Hero Text */}
-          <div className="lg:col-span-8 xl:col-span-9">
+          <div className="lg:col-span-8 xl:col-span-9 order-2 lg:order-1">
             <div className="hero-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none tracking-tight" style={{color: '#231F20'}}>
               {/* Line 1: I */}
               <div className="mb-2">
