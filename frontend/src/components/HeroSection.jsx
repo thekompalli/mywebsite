@@ -41,64 +41,31 @@ const HeroSection = () => {
                 </AnimatedWord>
               </div>
               
-              {/* Line 3: DATA with heart */}
-              <div className="mb-2 flex items-center">
+              {/* Line 3: DATA */}
+              <div className="mb-2">
                 <AnimatedWord delay={0.4}>
-                  DA
-                </AnimatedWord>
-                <motion.span 
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6, duration: 0.4 }}
-                  className="decorative-heart mx-4 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
-                >
-                  ♥
-                </motion.span>
-                <AnimatedWord delay={0.5}>
-                  TA
+                  DATA
                 </AnimatedWord>
               </div>
               
-              {/* Line 4: TO with star */}
-              <div className="mb-2 flex items-center">
-                <AnimatedWord delay={0.7}>
-                  T
-                </AnimatedWord>
-                <motion.span 
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.9, duration: 0.4 }}
-                  className="decorative-star mx-4 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
-                >
-                  ✱
-                </motion.span>
-                <AnimatedWord delay={0.8}>
-                  O
+              {/* Line 4: TO */}
+              <div className="mb-2">
+                <AnimatedWord delay={0.6}>
+                  TO
                 </AnimatedWord>
               </div>
               
               {/* Line 5: FUEL */}
               <div className="mb-2">
-                <AnimatedWord delay={1.0}>
+                <AnimatedWord delay={0.8}>
                   FUEL
                 </AnimatedWord>
               </div>
               
-              {/* Line 6: INNOVATION with peace sign */}
-              <div className="flex items-center">
-                <AnimatedWord delay={1.1}>
-                  INNOVA
-                </AnimatedWord>
-                <motion.span 
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.3, duration: 0.4 }}
-                  className="decorative-peace mx-2 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
-                >
-                  ✌
-                </motion.span>
-                <AnimatedWord delay={1.2}>
-                  ION.
+              {/* Line 6: INNOVATION */}
+              <div className="mb-2">
+                <AnimatedWord delay={1.0}>
+                  INNOVATION.
                 </AnimatedWord>
               </div>
             </div>
