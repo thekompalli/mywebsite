@@ -4,17 +4,53 @@ import { personalInfo } from '../data/mockData';
 
 const MarqueeText = ({ children }) => {
   return (
-    <div className="overflow-hidden whitespace-nowrap py-16">
+    <div className="relative h-32 flex items-center justify-center py-16">
       <motion.div
-        animate={{ x: ['100%', '-100%'] }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: 'linear'
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: [0, 1, 1, 0],
         }}
-        className="inline-block text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight"
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          repeatDelay: 0.5,
+          ease: "easeInOut"
+        }}
+        className="absolute text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap"
       >
-        {children}
+        Krishna Kompalli
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: [0, 0, 1, 1, 0],
+        }}
+        transition={{
+          duration: 3,
+          delay: 1.75,
+          repeat: Infinity,
+          repeatDelay: 0.5,
+          ease: "easeInOut"
+        }}
+        className="absolute text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap"
+      >
+        Krishna Kompalli
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: [0, 0, 0, 1, 1, 0],
+        }}
+        transition={{
+          duration: 3,
+          delay: 3.5,
+          repeat: Infinity,
+          repeatDelay: 0.5,
+          ease: "easeInOut"
+        }}
+        className="absolute text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap"
+      >
+        Krishna Kompalli
       </motion.div>
     </div>
   );
