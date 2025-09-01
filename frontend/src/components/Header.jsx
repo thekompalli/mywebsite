@@ -42,7 +42,7 @@ const Header = () => {
           </motion.div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-12">
+          <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
             {[
               { label: 'WORK', id: 'work' },
               { label: 'COMPANY', id: 'experience' },
@@ -55,12 +55,22 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm text-gray-900 hover:text-gray-600 transition-colors font-medium tracking-wider"
+                className="text-sm text-gray-900 hover:text-gray-600 transition-colors font-medium tracking-wider relative group"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
               </motion.button>
             ))}
           </nav>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button className="text-gray-900 p-2">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
 
           {/* Contact Info */}
           <motion.div 
