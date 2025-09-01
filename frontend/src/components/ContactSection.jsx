@@ -77,24 +77,6 @@ const ContactSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                href={`tel:${personalInfo.phone}`}
-                className="flex items-center space-x-6 group hover:text-gray-600 transition-colors"
-              >
-                <div className="w-12 h-12 bg-black group-hover:bg-gray-800 flex items-center justify-center transition-colors">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-black group-hover:text-gray-600 text-lg transition-colors">
-                    {personalInfo.phone}
-                  </p>
-                  <p className="text-sm text-gray-500 tracking-wide">Call me</p>
-                </div>
-              </motion.a>
-              
-              <motion.a
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
                 href={`https://${personalInfo.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +96,7 @@ const ContactSection = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex items-center space-x-6"
               >
                 <div className="w-12 h-12 bg-black flex items-center justify-center">
