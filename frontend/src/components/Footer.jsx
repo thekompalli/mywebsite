@@ -21,7 +21,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white text-black">
+    <footer className="bg-white text-gray-900">
       {/* Top Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
