@@ -5,41 +5,9 @@ import { personalInfo } from '../data/mockData';
 const MarqueeText = ({ children }) => {
   return (
     <div className="relative h-32 flex items-center justify-center py-16 overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0, 1, 1, 1, 0],
-          scale: [0.8, 1, 1, 1, 0.8]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          repeatDelay: 1,
-          ease: "easeInOut",
-          times: [0, 0.2, 0.4, 0.6, 1]
-        }}
-        className="absolute text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap"
-      >
+      <div className="text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap">
         Krishna Kompalli
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0, 0, 0, 1, 1, 1, 0],
-          scale: [0.8, 0.8, 0.8, 1, 1, 1, 0.8]
-        }}
-        transition={{
-          duration: 4,
-          delay: 2.5,
-          repeat: Infinity,
-          repeatDelay: 1,
-          ease: "easeInOut",
-          times: [0, 0.1, 0.2, 0.3, 0.5, 0.7, 1]
-        }}
-        className="absolute text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight whitespace-nowrap"
-      >
-        Krishna Kompalli
-      </motion.div>
+      </div>
     </div>
   );
 };
