@@ -19,6 +19,17 @@ code {
         monospace;
 }
 
+/* Custom text selection color */
+::selection {
+    background-color: #00FF00;
+    color: #231F20;
+}
+
+::-moz-selection {
+    background-color: #00FF00;
+    color: #231F20;
+}
+
 /* Premium spacing and typography */
 .hero-text {
     font-weight: 800;
