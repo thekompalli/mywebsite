@@ -72,12 +72,6 @@ const Footer = () => {
               >
                 {personalInfo.email.toUpperCase()}
               </a>
-              <a 
-                href={`tel:${personalInfo.phone}`}
-                className="block text-sm font-medium tracking-wider text-black hover:text-gray-600 transition-colors"
-              >
-                {personalInfo.phone}
-              </a>
             </motion.div>
           </div>
         </div>
