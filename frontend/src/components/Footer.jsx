@@ -21,7 +21,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-4xl font-bold mb-6 tracking-tight">K.</div>
+            <div className="text-4xl font-bold mb-6 tracking-tight">KK.</div>
             <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
               {personalInfo.name}
               <br />
