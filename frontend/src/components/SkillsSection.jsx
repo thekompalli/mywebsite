@@ -7,7 +7,7 @@ const SkillsSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="skills" className="premium-spacing bg-gray-50">
+    <section id="skills" className="premium-spacing bg-background">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
         {/* Main heading */}
         <motion.div
