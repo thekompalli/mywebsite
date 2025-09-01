@@ -4,7 +4,6 @@ export const personalInfo = {
   title: "Lead Data Scientist | Machine Learning & AI Specialist",
   location: "Paris, France",
   email: "gk.kompalli@gmail.com",
-  phone: "+33769024569",
   linkedin: "linkedin.com/in/krishna-kompalli/",
   aboutMe: "Senior Data Scientist and ML Engineer with deep expertise in developing and deploying advanced machine learning solutions across healthcare, fintech, and education domains. Over 5+ years of hands-on experience building production-ready AI systems, from research and experimentation to scalable deployment. Proven track record of leading technical initiatives, mentoring junior data scientists, and translating complex analytical insights into impactful business outcomes."
 };
