@@ -4,15 +4,15 @@ import { personalInfo } from '../data/mockData';
 
 const MarqueeText = ({ children }) => {
   return (
-    <div className="overflow-hidden whitespace-nowrap">
+    <div className="overflow-hidden whitespace-nowrap py-16">
       <motion.div
         animate={{ x: ['100%', '-100%'] }}
         transition={{
-          duration: 10,
+          duration: 15,
           repeat: Infinity,
           ease: 'linear'
         }}
-        className="inline-block text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white/10 tracking-tight"
+        className="inline-block text-8xl lg:text-9xl xl:text-[12rem] font-bold text-black tracking-tight"
       >
         {children}
       </motion.div>
@@ -29,115 +29,137 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
-      {/* Marquee Background */}
-      <div className="absolute inset-0 flex items-center">
-        <MarqueeText>KRISHNA KOMPALLI • KRISHNA KOMPALLI • KRISHNA KOMPALLI • </MarqueeText>
-      </div>
-      
-      {/* Footer Content */}
-      <div className="relative z-10 py-16">
+    <footer className="bg-gray-50 text-black">
+      {/* Top Section */}
+      <div className="py-16">
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Brand */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {/* Left - Mission Statement */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="space-y-2"
             >
-              <div className="text-4xl font-bold mb-6 tracking-tight">KK.</div>
-              <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
-                {personalInfo.name}
-                <br />
-                Lead Data Scientist | ML & AI Specialist
+              <p className="text-sm font-medium tracking-wide">
+                I LOVE WORKING WITH PASSIONATE PEOPLE
+              </p>
+              <p className="text-sm font-medium tracking-wide">
+                AND BRANDS
               </p>
             </motion.div>
 
-            {/* Quick Links */}
+            {/* Center - CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
+              className="space-y-2"
             >
-              <h4 className="font-bold mb-6 text-lg tracking-wide">Navigation</h4>
-              <div className="space-y-3">
-                {[
-                  { label: 'Work', id: 'work' },
-                  { label: 'Company', id: 'experience' },
-                  { label: 'Capabilities', id: 'skills' },
-                  { label: 'Contact', id: 'contact' }
-                ].map((link, index) => (
-                  <motion.button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    whileHover={{ x: 5 }}
-                    className="block text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide text-left"
-                  >
-                    {link.label}
-                  </motion.button>
-                ))}
-              </div>
+              <p className="text-sm font-medium tracking-wide">
+                LET'S
+              </p>
+              <p className="text-sm font-medium tracking-wide">
+                COLLABORATE
+              </p>
             </motion.div>
 
-            {/* Contact */}
+            {/* Right - Contact */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              className="space-y-2"
             >
-              <h4 className="font-bold mb-6 text-lg tracking-wide">Connect</h4>
-              <div className="space-y-3 text-sm">
-                <p className="text-gray-400 tracking-wide">{personalInfo.location}</p>
-                <motion.a 
-                  href={`mailto:${personalInfo.email}`}
-                  whileHover={{ x: 5 }}
-                  className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
-                >
-                  {personalInfo.email}
-                </motion.a>
-                <motion.a 
-                  href={`tel:${personalInfo.phone}`}
-                  whileHover={{ x: 5 }}
-                  className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
-                >
-                  {personalInfo.phone}
-                </motion.a>
-              </div>
+              <a 
+                href={`mailto:${personalInfo.email}`}
+                className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-colors"
+              >
+                {personalInfo.email.toUpperCase()}
+              </a>
+              <a 
+                href={`tel:${personalInfo.phone}`}
+                className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-colors"
+              >
+                {personalInfo.phone}
+              </a>
             </motion.div>
           </div>
+        </div>
+      </div>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="border-t border-gray-800 mt-12 pt-12 flex flex-col md:flex-row justify-between items-center"
-          >
-            <p className="text-gray-400 text-sm tracking-wide">
-              © 2025 {personalInfo.name}. All rights reserved.
-            </p>
-            <div className="flex space-x-8 mt-6 md:mt-0">
+      {/* Middle Section - Marquee Name */}
+      <div className="border-t border-gray-200">
+        <MarqueeText>Krishna Kompalli • Krishna Kompalli • Krishna Kompalli • </MarqueeText>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="border-t border-gray-200 py-16">
+        <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Left - Navigation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              {[
+                { label: 'WORK', id: 'work' },
+                { label: 'COMPANY', id: 'experience' },
+                { label: 'CAPABILITIES', id: 'skills' },
+                { label: 'CONTACT', id: 'contact' }
+              ].map((link, index) => (
+                <motion.button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  whileHover={{ x: 5 }}
+                  className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-all duration-300 text-left"
+                >
+                  {link.label}
+                </motion.button>
+              ))}
+            </motion.div>
+
+            {/* Right - Social Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
               <motion.a 
                 href={`https://${personalInfo.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-                className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
+                whileHover={{ x: 5 }}
+                className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-all duration-300"
               >
-                LinkedIn
+                LINKEDIN
               </motion.a>
               <motion.a 
                 href={`mailto:${personalInfo.email}`}
-                whileHover={{ y: -2 }}
-                className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
+                whileHover={{ x: 5 }}
+                className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-all duration-300"
               >
-                Email
+                EMAIL
               </motion.a>
-            </div>
-          </motion.div>
+              <motion.a 
+                href="https://github.com/krishnakompalli"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 5 }}
+                className="block text-sm font-medium tracking-wide hover:text-gray-600 transition-all duration-300"
+              >
+                GITHUB
+              </motion.a>
+            </motion.div>
+          </div>
         </div>
       </div>
     </footer>
