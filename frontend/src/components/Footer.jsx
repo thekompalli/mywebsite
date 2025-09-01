@@ -2,6 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/mockData';
 
+const MarqueeText = ({ children }) => {
+  return (
+    <div className="overflow-hidden whitespace-nowrap">
+      <motion.div
+        animate={{ x: ['100%', '-100%'] }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: 'linear'
+        }}
+        className="inline-block text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white/10 tracking-tight"
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+};
+
 const Footer = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -11,108 +29,116 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-16">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Brand */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-4xl font-bold mb-6 tracking-tight">KK.</div>
-            <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
-              {personalInfo.name}
-              <br />
-              Lead Data Scientist | ML & AI Specialist
-            </p>
-          </motion.div>
+    <footer className="bg-black text-white relative overflow-hidden">
+      {/* Marquee Background */}
+      <div className="absolute inset-0 flex items-center">
+        <MarqueeText>KRISHNA KOMPALLI • KRISHNA KOMPALLI • KRISHNA KOMPALLI • </MarqueeText>
+      </div>
+      
+      {/* Footer Content */}
+      <div className="relative z-10 py-16">
+        <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* Brand */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold mb-6 tracking-tight">KK.</div>
+              <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
+                {personalInfo.name}
+                <br />
+                Lead Data Scientist | ML & AI Specialist
+              </p>
+            </motion.div>
 
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="font-bold mb-6 text-lg tracking-wide">Navigation</h4>
-            <div className="space-y-3">
-              {[
-                { label: 'Work', id: 'work' },
-                { label: 'Company', id: 'experience' },
-                { label: 'Capabilities', id: 'skills' },
-                { label: 'Contact', id: 'contact' }
-              ].map((link, index) => (
-                <motion.button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
+            {/* Quick Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-bold mb-6 text-lg tracking-wide">Navigation</h4>
+              <div className="space-y-3">
+                {[
+                  { label: 'Work', id: 'work' },
+                  { label: 'Company', id: 'experience' },
+                  { label: 'Capabilities', id: 'skills' },
+                  { label: 'Contact', id: 'contact' }
+                ].map((link, index) => (
+                  <motion.button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    whileHover={{ x: 5 }}
+                    className="block text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide text-left"
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-bold mb-6 text-lg tracking-wide">Connect</h4>
+              <div className="space-y-3 text-sm">
+                <p className="text-gray-400 tracking-wide">{personalInfo.location}</p>
+                <motion.a 
+                  href={`mailto:${personalInfo.email}`}
                   whileHover={{ x: 5 }}
-                  className="block text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide text-left"
+                  className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
                 >
-                  {link.label}
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
+                  {personalInfo.email}
+                </motion.a>
+                <motion.a 
+                  href={`tel:${personalInfo.phone}`}
+                  whileHover={{ x: 5 }}
+                  className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
+                >
+                  {personalInfo.phone}
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
 
-          {/* Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
+            className="border-t border-gray-800 mt-12 pt-12 flex flex-col md:flex-row justify-between items-center"
           >
-            <h4 className="font-bold mb-6 text-lg tracking-wide">Connect</h4>
-            <div className="space-y-3 text-sm">
-              <p className="text-gray-400 tracking-wide">{personalInfo.location}</p>
+            <p className="text-gray-400 text-sm tracking-wide">
+              © 2025 {personalInfo.name}. All rights reserved.
+            </p>
+            <div className="flex space-x-8 mt-6 md:mt-0">
               <motion.a 
-                href={`mailto:${personalInfo.email}`}
-                whileHover={{ x: 5 }}
-                className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
+                href={`https://${personalInfo.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
               >
-                {personalInfo.email}
+                LinkedIn
               </motion.a>
               <motion.a 
-                href={`tel:${personalInfo.phone}`}
-                whileHover={{ x: 5 }}
-                className="block text-gray-400 hover:text-white transition-all duration-300 tracking-wide"
+                href={`mailto:${personalInfo.email}`}
+                whileHover={{ y: -2 }}
+                className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
               >
-                {personalInfo.phone}
+                Email
               </motion.a>
             </div>
           </motion.div>
         </div>
-
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-800 mt-12 pt-12 flex flex-col md:flex-row justify-between items-center"
-        >
-          <p className="text-gray-400 text-sm tracking-wide">
-            © 2025 {personalInfo.name}. All rights reserved.
-          </p>
-          <div className="flex space-x-8 mt-6 md:mt-0">
-            <motion.a 
-              href={`https://${personalInfo.linkedin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -2 }}
-              className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
-            >
-              LinkedIn
-            </motion.a>
-            <motion.a 
-              href={`mailto:${personalInfo.email}`}
-              whileHover={{ y: -2 }}
-              className="text-gray-400 hover:text-white transition-all duration-300 text-sm tracking-wide"
-            >
-              Email
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </footer>
   );
