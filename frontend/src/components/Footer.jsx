@@ -129,8 +129,7 @@ const Footer = () => {
 
       {/* Middle Section - Marquee Name */}
       <div className="border-t border-gray-200">
-        <MarqueeText>Krishna Kompalli • Krishna Kompalli • Krishna Kompalli • </MarqueeText>
-      </div>
+        <MarqueeText /></div>
 
       {/* Bottom Section */}
       <div className="border-t border-gray-200 py-16">
