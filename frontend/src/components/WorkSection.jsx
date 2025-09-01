@@ -65,7 +65,7 @@ const WorkSection = () => {
         <div className="max-w-7xl mx-auto px-8 lg:px-12 text-center">
           <motion.h2 
             style={{ scale, opacity }}
-            className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[25rem] font-bold text-black section-heading leading-none tracking-tighter will-change-transform"
+            className="text-[8rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] font-bold text-black section-heading leading-none tracking-tighter will-change-transform"
           >
             WORK
           </motion.h2>
