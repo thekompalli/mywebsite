@@ -55,7 +55,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm text-black hover:text-gray-600 transition-colors font-medium tracking-wider"
+                className="text-sm text-gray-900 hover:text-gray-600 transition-colors font-medium tracking-wider"
               >
                 {item.label}
               </motion.button>
