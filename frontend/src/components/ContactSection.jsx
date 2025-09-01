@@ -28,7 +28,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="premium-spacing bg-gray-50">
+    <section id="contact" className="premium-spacing bg-background">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Contact Info */}
