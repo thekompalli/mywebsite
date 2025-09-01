@@ -2,17 +2,17 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalInfo } from '../data/mockData';
 
-const AnimatedText = ({ children, delay = 0 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+const AnimatedWord = ({ children, delay = 0 }) => {
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 100 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-      transition={{ duration: 0.8, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="overflow-hidden"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 0.6, 
+        delay, 
+        ease: [0.25, 0.46, 0.45, 0.94] 
+      }}
+      className="overflow-hidden inline-block"
     >
       {children}
     </motion.div>
@@ -27,48 +27,77 @@ const HeroSection = () => {
           {/* Main Hero Text */}
           <div className="lg:col-span-8 xl:col-span-9">
             <div className="hero-text text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] font-bold text-black leading-none tracking-tight">
-              <div className="overflow-hidden">
-                <AnimatedText delay={0}>
-                  <div className="flex items-center">
-                    I
-                  </div>
-                </AnimatedText>
+              {/* Line 1: WE */}
+              <div className="mb-2">
+                <AnimatedWord delay={0}>
+                  WE
+                </AnimatedWord>
               </div>
-              <div className="overflow-hidden">
-                <AnimatedText delay={0.2}>
-                  <div className="flex items-center">
-                    CREATE
-                  </div>
-                </AnimatedText>
+              
+              {/* Line 2: CREATE */}
+              <div className="mb-2">
+                <AnimatedWord delay={0.2}>
+                  CREATE
+                </AnimatedWord>
               </div>
-              <div className="overflow-hidden">
-                <AnimatedText delay={0.4}>
-                  <div className="flex items-center">
-                    ME
-                    <span className="decorative-heart mx-4 text-6xl">♥</span>
-                    ORABLE
-                  </div>
-                </AnimatedText>
+              
+              {/* Line 3: MEMORABLE with heart */}
+              <div className="mb-2 flex items-center">
+                <AnimatedWord delay={0.4}>
+                  ME
+                </AnimatedWord>
+                <motion.span 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6, duration: 0.4 }}
+                  className="decorative-heart mx-4 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
+                >
+                  ♥
+                </motion.span>
+                <AnimatedWord delay={0.5}>
+                  ORABLE
+                </AnimatedWord>
               </div>
-              <div className="overflow-hidden">
-                <AnimatedText delay={0.6}>
-                  <div className="flex items-center">
-                    E
-                    <span className="decorative-star mx-4 text-6xl">✱</span>
-                    PERIENCES
-                  </div>
-                </AnimatedText>
+              
+              {/* Line 4: EXPERIENCES with star */}
+              <div className="mb-2 flex items-center">
+                <AnimatedWord delay={0.7}>
+                  E
+                </AnimatedWord>
+                <motion.span 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.9, duration: 0.4 }}
+                  className="decorative-star mx-4 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
+                >
+                  ✱
+                </motion.span>
+                <AnimatedWord delay={0.8}>
+                  PERIENCES
+                </AnimatedWord>
               </div>
-              <div className="overflow-hidden">
-                <AnimatedText delay={0.8}>
-                  <div className="flex items-center">
-                    F
-                    <span className="inline-block w-20 h-16 bg-black mx-4" style={{clipPath: 'polygon(0 0, 100% 0, 100% 70%, 0 100%)'}}></span>
-                    R B
-                    <span className="decorative-star ml-4 text-6xl">✌</span>
-                    ANDS.
-                  </div>
-                </AnimatedText>
+              
+              {/* Line 5: FOR BRANDS with peace sign */}
+              <div className="flex items-center">
+                <AnimatedWord delay={1.0}>
+                  FOR
+                </AnimatedWord>
+                <div className="mx-4">
+                  <AnimatedWord delay={1.1}>
+                    B
+                  </AnimatedWord>
+                </div>
+                <motion.span 
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.3, duration: 0.4 }}
+                  className="decorative-peace mx-2 text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] leading-none"
+                >
+                  ✌
+                </motion.span>
+                <AnimatedWord delay={1.2}>
+                  ANDS.
+                </AnimatedWord>
               </div>
             </div>
           </div>
@@ -78,7 +107,7 @@ const HeroSection = () => {
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
               className="space-y-12"
             >
               <div>
