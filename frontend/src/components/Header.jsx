@@ -85,12 +85,6 @@ const Header = () => {
             >
               {personalInfo.email.toUpperCase()}
             </a>
-            <a 
-              href={`tel:${personalInfo.phone}`}
-              className="text-gray-600 hover:text-black transition-colors mt-1"
-            >
-              {personalInfo.phone}
-            </a>
           </motion.div>
         </div>
       </div>
