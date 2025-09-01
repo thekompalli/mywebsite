@@ -27,24 +27,24 @@ const HeroSection = () => {
           {/* Main Hero Text */}
           <div className="lg:col-span-8 xl:col-span-9">
             <div className="hero-text text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] font-bold text-black leading-none tracking-tight">
-              {/* Line 1: WE */}
+              {/* Line 1: I */}
               <div className="mb-2">
                 <AnimatedWord delay={0}>
-                  WE
+                  I
                 </AnimatedWord>
               </div>
               
-              {/* Line 2: CREATE */}
+              {/* Line 2: HARNESS */}
               <div className="mb-2">
                 <AnimatedWord delay={0.2}>
-                  CREATE
+                  HARNESS
                 </AnimatedWord>
               </div>
               
-              {/* Line 3: MEMORABLE with heart */}
+              {/* Line 3: DATA with heart */}
               <div className="mb-2 flex items-center">
                 <AnimatedWord delay={0.4}>
-                  ME
+                  DA
                 </AnimatedWord>
                 <motion.span 
                   initial={{ opacity: 0, scale: 0 }}
@@ -55,14 +55,14 @@ const HeroSection = () => {
                   ♥
                 </motion.span>
                 <AnimatedWord delay={0.5}>
-                  ORABLE
+                  TA
                 </AnimatedWord>
               </div>
               
-              {/* Line 4: EXPERIENCES with star */}
+              {/* Line 4: TO with star */}
               <div className="mb-2 flex items-center">
                 <AnimatedWord delay={0.7}>
-                  E
+                  T
                 </AnimatedWord>
                 <motion.span 
                   initial={{ opacity: 0, scale: 0 }}
@@ -73,20 +73,22 @@ const HeroSection = () => {
                   ✱
                 </motion.span>
                 <AnimatedWord delay={0.8}>
-                  PERIENCES
+                  O
                 </AnimatedWord>
               </div>
               
-              {/* Line 5: FOR BRANDS with peace sign */}
-              <div className="flex items-center">
+              {/* Line 5: FUEL */}
+              <div className="mb-2">
                 <AnimatedWord delay={1.0}>
-                  FOR
+                  FUEL
                 </AnimatedWord>
-                <div className="mx-4">
-                  <AnimatedWord delay={1.1}>
-                    B
-                  </AnimatedWord>
-                </div>
+              </div>
+              
+              {/* Line 6: INNOVATION with peace sign */}
+              <div className="flex items-center">
+                <AnimatedWord delay={1.1}>
+                  INNOVA
+                </AnimatedWord>
                 <motion.span 
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -96,7 +98,7 @@ const HeroSection = () => {
                   ✌
                 </motion.span>
                 <AnimatedWord delay={1.2}>
-                  ANDS.
+                  ION.
                 </AnimatedWord>
               </div>
             </div>
