@@ -27,8 +27,7 @@ export const experience = [
       "Defined the technical AI roadmap, leading a team of 4 to deliver 5 major client-facing features in under 2 years",
       "Automated end-to-end ML pipelines, reducing model deployment time from 4 weeks to less than 1 week",
       "Achieved a 75% project conversion rate by building and presenting over 8 client-facing proof-of-concept models",
-      "Optimized a core recommendation engine, increasing click-through rate (CTR) by 22% and reducing latency by 30%",
-      "Pioneered fine-tuned LLM applications, creating a support agent to handle 20% of queries and a tool to save clients 70+ hours weekly"
+      "Optimized a core recommendation engine, increasing click-through rate (CTR) by 22% and reducing latency by 30%"
     ]
   },
   {
@@ -64,7 +63,8 @@ export const experience = [
     location: "Bengaluru, India",
     achievements: [
       "Developed Turing, an AI-driven data science server, enhancing the efficiency and scalability of educational solutions",
-      "Integrated advanced AI models to deliver robust, scalable solutions tailored to client needs"
+      "Integrated advanced AI models to deliver robust, scalable solutions tailored to client needs",
+      "Contributed to foundational AI infrastructure for educational technology platform"
     ]
   },
   {
@@ -75,7 +75,8 @@ export const experience = [
     location: "India",
     achievements: [
       "Developed a 'Smart Search Bar' using BERT, improving search accuracy by 30%",
-      "Designed AI solutions for yoga pose verification using OpenCV, achieving a 90% success rate"
+      "Designed AI solutions for yoga pose verification using OpenCV, achieving a 90% success rate",
+      "Built machine learning models for healthcare applications and patient engagement"
     ]
   },
   {
@@ -86,7 +87,8 @@ export const experience = [
     location: "India",
     achievements: [
       "Built AI-powered virtual assistants for global banking clients using RASA, boosting operational efficiency by 40%",
-      "Enhanced chatbot interfaces for better user experience, achieving a 95% client satisfaction rate"
+      "Enhanced chatbot interfaces for better user experience, achieving a 95% client satisfaction rate",
+      "Developed conversational AI solutions for financial services sector"
     ]
   }
 ];
