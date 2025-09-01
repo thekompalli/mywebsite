@@ -74,25 +74,25 @@ const CompanyShowcase = ({ exp, index }) => {
           className="mt-12"
         >
           <h4 className="text-2xl font-bold text-black mb-6 section-heading">Educational Video Content</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4">
                 <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Eden AI Integration Tutorial"
+                  src="https://www.youtube.com/embed/KlCghmesA5o"
+                  title="Eden AI Tutorial - Integration Guide"
                   className="w-full h-full"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
-              <h5 className="font-bold text-black mb-2">AI Integration Best Practices</h5>
-              <p className="text-sm text-gray-600">Comprehensive guide to implementing AI solutions</p>
+              <h5 className="font-bold text-black mb-2">AI Integration Guide</h5>
+              <p className="text-sm text-gray-600">Comprehensive tutorial on AI integration</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4">
                 <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src="https://www.youtube.com/embed/GN5HhhnH-ew"
                   title="Eden AI Product Demo"
                   className="w-full h-full"
                   frameBorder="0"
@@ -100,8 +100,22 @@ const CompanyShowcase = ({ exp, index }) => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <h5 className="font-bold text-black mb-2">Product Demo & Features</h5>
-              <p className="text-sm text-gray-600">Showcasing Eden AI platform capabilities</p>
+              <h5 className="font-bold text-black mb-2">Product Demo</h5>
+              <p className="text-sm text-gray-600">Showcasing Eden AI platform features</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/5VIqZ3qYzs0"
+                  title="Eden AI Best Practices"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <h5 className="font-bold text-black mb-2">Best Practices</h5>
+              <p className="text-sm text-gray-600">Advanced techniques and best practices</p>
             </div>
           </div>
         </motion.div>
