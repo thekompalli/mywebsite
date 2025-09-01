@@ -80,7 +80,7 @@ const HeroSection = () => {
               className="space-y-8 lg:space-y-12"
             >
               <div>
-                <h2 className="text-sm font-bold text-gray-900 tracking-[0.3em] mb-6 uppercase">
+                <h2 className="text-sm font-bold text-gray-900 tracking-[0.3em] mb-4 lg:mb-6 uppercase">
                   Hello
                 </h2>
                 <p className="text-sm text-gray-600 leading-relaxed tracking-wide">
