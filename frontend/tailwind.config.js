@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+      },
+      letterSpacing: {
+        'wider': '0.1em',
+        'widest': '0.3em',
+      },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
