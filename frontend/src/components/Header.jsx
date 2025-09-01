@@ -38,7 +38,7 @@ const Header = () => {
             className="text-3xl font-bold text-black tracking-tight cursor-pointer"
             onClick={() => scrollToSection('hero')}
           >
-            K.
+            KK.
           </motion.div>
 
           {/* Navigation */}
