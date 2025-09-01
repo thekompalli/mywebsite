@@ -71,7 +71,7 @@ const Header = () => {
           >
             <a 
               href={`mailto:${personalInfo.email}`}
-              className="text-black hover:text-gray-600 transition-colors font-medium tracking-wide"
+              className="text-gray-900 hover:text-gray-600 transition-colors font-medium tracking-wide"
             >
               {personalInfo.email.toUpperCase()}
             </a>
