@@ -61,7 +61,7 @@ const WorkSection = () => {
       </section>
 
       {/* Large WORK Text with Zoom Effect */}
-      <section id="work" className="premium-spacing bg-background overflow-hidden" ref={workRef}>
+      <section id="work" className="premium-spacing overflow-hidden" ref={workRef} style={{backgroundColor: '#FAFAFA'}}>
         <div className="max-w-7xl mx-auto px-8 lg:px-12 text-center">
           <motion.h2 
             style={{ scale, opacity }}
