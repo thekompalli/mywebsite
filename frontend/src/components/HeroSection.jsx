@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Main Hero Text */}
           <div className="lg:col-span-8 xl:col-span-9">
-            <div className="hero-text text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] font-bold text-black leading-none tracking-tight">
+            <div className="hero-text text-6xl sm:text-7xl lg:text-8xl xl:text-[8rem] font-bold text-gray-900 leading-none tracking-tight">
               {/* Line 1: I */}
               <div className="mb-2">
                 <AnimatedWord delay={0}>
