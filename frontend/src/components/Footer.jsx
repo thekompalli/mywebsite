@@ -4,8 +4,8 @@ import { personalInfo } from '../data/mockData';
 
 const MarqueeText = ({ children }) => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center py-32 overflow-hidden">
-      <div className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-900 tracking-tight whitespace-nowrap">
+    <div className="relative h-64 flex items-center justify-center py-16 overflow-hidden">
+      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 tracking-tight whitespace-nowrap">
         Krishna Kompalli
       </div>
     </div>
