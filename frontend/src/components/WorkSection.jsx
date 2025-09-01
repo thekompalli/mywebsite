@@ -39,7 +39,7 @@ const WorkSection = () => {
   return (
     <>
       {/* Featured Project */}
-      <section className="premium-spacing bg-background">
+      <section className="premium-spacing" style={{backgroundColor: '#FAFAFA'}}>
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
           <motion.div 
             ref={ref}
