@@ -7,7 +7,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="premium-spacing bg-black text-white">
+    <section className="premium-spacing bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
         <div className="max-w-5xl">
           <motion.div
