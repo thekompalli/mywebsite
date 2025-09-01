@@ -1,10 +1,40 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { projects } from '../data/mockData';
 
 const WorkSection = () => {
   const ref = useRef(null);
+  const workRef = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [scrollCount, setScrollCount] = useState(0);
+  
+  const { scrollYProgress } = useScroll({
+    target: workRef,
+    offset: ["start end", "end start"]
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.3, 0.6, 1], [1, 1.2, 1.5, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [1, 1, 1, 0.8]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (workRef.current) {
+        const rect = workRef.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+          const scrollProgress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+          if (scrollProgress > 0.3 && scrollProgress < 0.9) {
+            // User is scrolling through the WORK section
+            setScrollCount(prev => Math.min(prev + 1, 3));
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -30,15 +60,12 @@ const WorkSection = () => {
         </div>
       </section>
 
-      {/* Large WORK Text */}
-      <section id="work" className="premium-spacing bg-gray-50">
+      {/* Large WORK Text with Zoom Effect */}
+      <section id="work" className="premium-spacing bg-gray-50 overflow-hidden" ref={workRef}>
         <div className="max-w-7xl mx-auto px-8 lg:px-12 text-center">
           <motion.h2 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[25rem] font-bold text-black section-heading leading-none tracking-tighter"
+            style={{ scale, opacity }}
+            className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[25rem] font-bold text-black section-heading leading-none tracking-tighter will-change-transform"
           >
             WORK
           </motion.h2>
