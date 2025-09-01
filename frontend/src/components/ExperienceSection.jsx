@@ -12,7 +12,7 @@ const CompanyShowcase = ({ exp, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className="border-b border-gray-300 pb-16 mb-16 last:border-b-0 last:pb-0 last:mb-0"
+      className="border-b border-gray-100 last:border-b-0 pb-12 last:pb-0 mb-12 last:mb-0"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Company Logo/Name Area */}
