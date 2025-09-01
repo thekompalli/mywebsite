@@ -126,6 +126,39 @@ const WorkSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Professional Photo Section */}
+      <section className="premium-spacing" style={{backgroundColor: '#FAFAFA'}}>
+        <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <div className="flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <img 
+                src="https://customer-assets.emergentagent.com/job_resume-elva/artifacts/qjoovfrn_Picsart_25-08-30_12-11-48-478.jpg"
+                alt="Krishna Kompalli - Lead Data Scientist"
+                className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-lg shadow-xl"
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-lg"
+              >
+                <h3 className="text-xl font-bold text-black mb-2">Krishna Kompalli</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Lead Data Scientist specializing in AI & Machine Learning solutions across healthcare, fintech, and education domains.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
