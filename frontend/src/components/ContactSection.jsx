@@ -194,7 +194,7 @@ const ContactSection = () => {
                 className="w-full bg-black text-white py-3 px-6 font-medium hover:bg-gray-800 transition-colors duration-300 tracking-wide"
               >
                 Send Message
-              </button>
+              </motion.button>
             </form>
           </motion.div>
         </div>
