@@ -10,60 +10,13 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
     color: #000000;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
-}
-
-/* Custom animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.animate-fade-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.animate-slide-left {
-    animation: slideInLeft 0.6s ease-out forwards;
-}
-
-.animate-delay-100 {
-    animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-    animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-    animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-    animation-delay: 0.4s;
 }
 
 /* Premium spacing and typography */
@@ -81,14 +34,14 @@ code {
 }
 
 .premium-spacing {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 @media (max-width: 768px) {
     .premium-spacing {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -105,32 +58,58 @@ textarea:focus {
     box-shadow: none;
 }
 
+/* Elva-style decorative elements */
+.decorative-heart {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.decorative-star {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 @layer base {
   :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 0%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 0%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 0%;
-        --primary: 0 0% 0%;
-        --primary-foreground: 0 0% 100%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
+        --background: 245 245 245;
+        --foreground: 0 0 0;
+        --card: 255 255 255;
+        --card-foreground: 0 0 0;
+        --popover: 255 255 255;
+        --popover-foreground: 0 0 0;
+        --primary: 0 0 0;
+        --primary-foreground: 255 255 255;
+        --secondary: 245 245 245;
+        --secondary-foreground: 0 0 0;
+        --muted: 245 245 245;
+        --muted-foreground: 100 100 100;
+        --accent: 245 245 245;
+        --accent-foreground: 0 0 0;
         --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 93%;
-        --input: 0 0% 93%;
-        --ring: 0 0% 0%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
+        --destructive-foreground: 255 255 255;
+        --border: 229 229 229;
+        --input: 229 229 229;
+        --ring: 0 0 0;
         --radius: 0rem;
     }
 }

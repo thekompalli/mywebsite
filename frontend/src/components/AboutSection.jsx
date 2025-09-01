@@ -7,48 +7,18 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="premium-spacing bg-gray-50">
+    <section className="premium-spacing bg-black text-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-5xl">
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl lg:text-6xl font-bold text-black leading-tight mb-12 section-heading">
-              I SPECIALIZE IN TURNING COMPLEXITY INTO INTELLIGENT SOLUTIONS
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-0 section-heading tracking-tight">
+              I KNOW DATA CAN BE COMPLICATED—AND LIKE YOU, I EMBRACE IT. I PAIR MY REFINED ANALYTICAL PROCESS WITH AN ALIGNMENT TO STRATEGY AND TECHNOLOGY TO ESTABLISH GENUINE PARTNERSHIPS. I SIT CLOSELY WITH MY PARTNERS AND ACT AS AN EXTENSION OF THEIR TEAM. BY ESTABLISHING THIS FOUNDATION OF TRUST I AM ABLE TO ACCOMPLISH GREATER RESULTS.
             </h2>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {personalInfo.aboutMe}
-            </p>
-            
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-center space-x-6 pt-8"
-            >
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white text-2xl">🤝</span>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-black tracking-[0.3em] uppercase">
-                  Part
-                </p>
-                <p className="text-sm font-bold text-black tracking-[0.3em] uppercase">
-                  ners
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
