@@ -72,12 +72,12 @@ const HeroSection = () => {
           </div>
 
           {/* Side Content */}
-          <div className="lg:col-span-4 xl:col-span-3 lg:pl-12">
+          <div className="lg:col-span-4 xl:col-span-3 lg:pl-12 order-1 lg:order-2">
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.5, duration: 0.8 }}
-              className="space-y-12"
+              className="space-y-8 lg:space-y-12"
             >
               <div>
                 <h2 className="text-sm font-bold text-gray-900 tracking-[0.3em] mb-6 uppercase">
