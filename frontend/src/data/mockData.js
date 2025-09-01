@@ -33,6 +33,19 @@ export const experience = [
   },
   {
     id: 2,
+    title: "AI Product Manager",
+    company: "Flyers Soft Pvt. Ltd.",
+    period: "2024 - Present",
+    location: "Remote",
+    achievements: [
+      "Building something great - leading AI product strategy and development",
+      "Driving product vision for next-generation AI solutions",
+      "Collaborating with cross-functional teams to deliver innovative AI products",
+      "Translating complex AI capabilities into user-friendly product features"
+    ]
+  },
+  {
+    id: 3,
     title: "Developer Advocate (Product)",
     company: "Eden AI",
     period: "2025 - Present",
@@ -40,11 +53,11 @@ export const experience = [
     achievements: [
       "Promoted product adoption by creating compelling content, tutorials, and technical documentation",
       "Bridged client and development teams to facilitate user-centric product enhancements",
-      "Created educational YouTube content: https://youtube.com/@edenai2254?si=TSgT70Etw1lGmROb"
+      "Created educational video content showcasing AI/ML integrations and best practices"
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Founding Team Member (AI Solutions)",
     company: "Oncourse AI",
     period: "Feb 2023 - Aug 2023",
@@ -55,7 +68,7 @@ export const experience = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Data Scientist",
     company: "MFine",
     period: "2022 - 2023 (10 months)",
@@ -66,7 +79,7 @@ export const experience = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Software Engineer",
     company: "Temenos India Pvt. Ltd.",
     period: "2021-2022 (1.4 years)",
