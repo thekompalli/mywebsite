@@ -84,11 +84,11 @@ const ExperienceSection = () => {
           className="mb-20"
         >
           <h2 className="text-6xl lg:text-7xl xl:text-8xl font-bold text-black mb-8 section-heading tracking-tight">
-            PARTNERS
+            COMPANIES
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl leading-relaxed">
-            I partner closely with industry-leading brands to deliver high-performing, 
-            impactful experiences for their customers, brand, and business.
+            Companies I've worked with to deliver high-performing, 
+            impactful AI and machine learning solutions for their customers, products, and business growth.
           </p>
         </motion.div>
 
