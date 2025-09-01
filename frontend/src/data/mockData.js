@@ -129,6 +129,38 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Plant Disease Detection with YOLO v11",
+    company: "Personal Project",
+    description: "Advanced computer vision model for detecting plant diseases using state-of-the-art YOLO v11 architecture",
+    tags: ["Computer Vision", "YOLO", "Agriculture Tech", "Python"],
+    impact: "High-accuracy disease detection for agricultural applications"
+  },
+  {
+    id: 4,
+    title: "Student Motion Tracking System",
+    company: "Personal Project", 
+    description: "AI-powered system for tracking student engagement and motion in educational environments",
+    tags: ["Computer Vision", "Motion Tracking", "Education Tech", "Python"],
+    impact: "Enhanced learning analytics and engagement monitoring"
+  },
+  {
+    id: 5,
+    title: "Coffee Machine Failure Prediction",
+    company: "Personal Project",
+    description: "Predictive maintenance model for coffee machines using machine learning algorithms",
+    tags: ["Predictive Analytics", "IoT", "Machine Learning", "Python"],
+    impact: "Preventive maintenance optimization and cost reduction"
+  },
+  {
+    id: 6,
+    title: "GitHub Critic AI System",
+    company: "Personal Project",
+    description: "AI-powered code review and analysis tool with FastAPI backend and Streamlit frontend",
+    tags: ["AI", "Code Analysis", "FastAPI", "Streamlit"],
+    impact: "Automated code quality assessment and improvement suggestions"
+  },
+  {
+    id: 7,
     title: "Smart Search Bar",
     company: "MFine",
     description: "BERT-powered search functionality for healthcare platform",
@@ -136,28 +168,20 @@ export const projects = [
     impact: "30% improvement in search accuracy"
   },
   {
-    id: 4,
-    title: "AI Yoga Pose Verification",
-    company: "MFine",
-    description: "OpenCV-based pose detection and verification system",
-    tags: ["Computer Vision", "OpenCV", "Health Tech"],
-    impact: "90% success rate in pose verification"
+    id: 8,
+    title: "Llama2 RAG Fusion System",
+    company: "Personal Project",
+    description: "Advanced Retrieval-Augmented Generation system using Llama2 for enhanced AI responses",
+    tags: ["RAG", "Llama2", "NLP", "Jupyter"],
+    impact: "Enhanced AI response accuracy with document-based context"
   },
   {
-    id: 5,
-    title: "Banking Virtual Assistants",
-    company: "Temenos",
-    description: "RASA-powered chatbots for global banking clients",
-    tags: ["RASA", "Chatbots", "Banking", "NLP"],
-    impact: "40% boost in operational efficiency"
-  },
-  {
-    id: 6,
-    title: "Turing AI Server",
-    company: "Oncourse AI",
-    description: "AI-driven data science server for educational solutions",
-    tags: ["AI", "Education", "Data Science", "Platform"],
-    impact: "Enhanced scalability for educational solutions"
+    id: 9,
+    title: "COVID-19 Data Visualizer",
+    company: "Personal Project",
+    description: "Comprehensive data visualization dashboard for COVID-19 statistics and trends",
+    tags: ["Data Visualization", "TypeScript", "Analytics", "Public Health"],
+    impact: "Real-time pandemic data insights and trend analysis"
   }
 ];
 
