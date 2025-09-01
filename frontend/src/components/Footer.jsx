@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
               {personalInfo.name}
               <br />
-              {personalInfo.title}
+              Lead Data Scientist | ML & AI Specialist
             </p>
           </motion.div>
 
@@ -36,11 +36,11 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold mb-6 text-lg tracking-wide">Quick Links</h4>
+            <h4 className="font-bold mb-6 text-lg tracking-wide">Navigation</h4>
             <div className="space-y-3">
               {[
                 { label: 'Work', id: 'work' },
-                { label: 'Experience', id: 'experience' },
+                { label: 'Company', id: 'experience' },
                 { label: 'Capabilities', id: 'skills' },
                 { label: 'Contact', id: 'contact' }
               ].map((link, index) => (
@@ -63,7 +63,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold mb-6 text-lg tracking-wide">Contact</h4>
+            <h4 className="font-bold mb-6 text-lg tracking-wide">Connect</h4>
             <div className="space-y-3 text-sm">
               <p className="text-gray-400 tracking-wide">{personalInfo.location}</p>
               <motion.a 

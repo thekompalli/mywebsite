@@ -1,49 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { experience, testimonials } from '../data/mockData';
+import { experience } from '../data/mockData';
 
-const ExperienceCard = ({ exp, index }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <motion.div 
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, delay: index * 0.1 }}
-      className="border-b border-gray-100 last:border-b-0 pb-12 last:pb-0 mb-12 last:mb-0"
-    >
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8">
-        <div className="lg:w-2/3">
-          <h3 className="text-3xl font-bold text-black mb-4 section-heading">{exp.title}</h3>
-          <p className="text-xl text-gray-700 mb-2 font-medium">{exp.company}</p>
-          <p className="text-sm text-gray-500 tracking-wide">{exp.location}</p>
-        </div>
-        <div className="mt-6 lg:mt-0 lg:text-right">
-          <p className="text-sm font-medium text-black tracking-wide">{exp.period}</p>
-        </div>
-      </div>
-      
-      <div className="space-y-4">
-        {exp.achievements.map((achievement, achIndex) => (
-          <motion.div 
-            key={achIndex}
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.6, delay: 0.2 + achIndex * 0.1 }}
-            className="flex items-start space-x-4"
-          >
-            <div className="w-2 h-2 bg-black rounded-full mt-3 flex-shrink-0"></div>
-            <p className="text-gray-600 leading-relaxed">{achievement}</p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-  );
-};
-
-const TestimonialCard = ({ testimonial, index }) => {
+const CompanyShowcase = ({ exp, index }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -53,22 +12,58 @@ const TestimonialCard = ({ testimonial, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className="bg-white p-10 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-sm group"
+      className="border-b border-gray-300 pb-16 mb-16 last:border-b-0 last:pb-0 last:mb-0"
     >
-      <motion.div 
-        initial={{ scale: 0.8 }}
-        animate={isInView ? { scale: 1 } : { scale: 0.8 }}
-        transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-        className="mb-8"
-      >
-        <div className="w-20 h-20 bg-gray-50 group-hover:bg-gray-100 rounded-full mb-6 transition-colors duration-300"></div>
-        <h4 className="font-bold text-black mb-2 text-lg section-heading">{testimonial.company}</h4>
-        <p className="text-sm text-gray-500 tracking-wide">{testimonial.name}</p>
-      </motion.div>
-      
-      <p className="text-gray-600 leading-relaxed italic text-lg">
-        "{testimonial.text}"
-      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Company Logo/Name Area */}
+        <div className="lg:col-span-3">
+          <div className="text-center">
+            <motion.div 
+              initial={{ scale: 0.8 }}
+              animate={isInView ? { scale: 1 } : { scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
+              className="mb-6"
+            >
+              <h3 className="text-4xl font-bold text-black mb-2 section-heading tracking-tight">
+                {exp.company.toUpperCase()}
+              </h3>
+              <p className="text-sm text-gray-500 tracking-widest">{exp.period}</p>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Project Description */}
+        <div className="lg:col-span-4">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+          >
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+              {exp.achievements[0]}
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {exp.achievements[1]}
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Impact/Results */}
+        <div className="lg:col-span-5">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
+          >
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+              {exp.achievements[2] || exp.achievements[1]}
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {exp.achievements[3] || exp.achievements[2] || 'Key achievements and impact delivered through innovative solutions.'}
+            </p>
+          </motion.div>
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -78,43 +73,30 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="experience" className="premium-spacing bg-white">
+    <section id="experience" className="premium-spacing bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
-        {/* Experience Section */}
-        <div className="mb-24">
-          <motion.h2 
-            ref={ref}
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl lg:text-6xl font-bold text-black mb-8 section-heading"
-          >
-            Partners
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-gray-600 mb-16 max-w-4xl leading-relaxed"
-          >
-            I partner closely with industry-leading companies to deliver high-performing, 
-            impactful AI and machine learning solutions for their customers, products, and business growth.
-          </motion.p>
-          
-          <div className="space-y-16">
-            {experience.map((exp, index) => (
-              <ExperienceCard key={exp.id} exp={exp} index={index} />
-            ))}
-          </div>
-        </div>
+        {/* Partners Header */}
+        <motion.div 
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <h2 className="text-6xl lg:text-7xl xl:text-8xl font-bold text-black mb-8 section-heading tracking-tight">
+            PARTNERS
+          </h2>
+          <p className="text-lg text-gray-600 max-w-4xl leading-relaxed">
+            I partner closely with industry-leading brands to deliver high-performing, 
+            impactful experiences for their customers, brand, and business.
+          </p>
+        </motion.div>
 
-        {/* Testimonials */}
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
-            ))}
-          </div>
+        {/* Company Showcases */}
+        <div className="space-y-0">
+          {experience.slice(0, 3).map((exp, index) => (
+            <CompanyShowcase key={exp.id} exp={exp} index={index} />
+          ))}
         </div>
       </div>
     </section>
