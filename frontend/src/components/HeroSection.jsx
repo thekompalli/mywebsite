@@ -21,7 +21,7 @@ const AnimatedWord = ({ children, delay = 0 }) => {
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-start bg-gray-50 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-start bg-background pt-20">
       <div className="max-w-7xl mx-auto px-8 lg:px-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Main Hero Text */}
