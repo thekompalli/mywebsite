@@ -1,0 +1,18 @@
+RESUME SETUP INSTRUCTIONS
+========================
+
+To make your resume viewable and downloadable on the website:
+
+1. Add your resume PDF file to this public folder
+2. Name it exactly: KrishnaKompalli.pdf
+3. The Resume section on your website will automatically detect and serve the file
+
+Current status: No resume file found
+Expected location: /public/KrishnaKompalli.pdf
+
+Once you add the PDF file, visitors can:
+- View the resume in a new browser tab
+- Download the resume file
+- Access it via the Resume menu option
+
+Make sure the PDF file is properly formatted and contains all your professional information.
