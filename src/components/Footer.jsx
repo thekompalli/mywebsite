@@ -84,51 +84,47 @@ const Footer = () => {
               viewport={{ once: true }}
               className="hidden lg:block flex-shrink-0"
             >
-              <div className="grid grid-cols-2 gap-12">
-                <div className="space-y-3 text-right">
-                  <button
-                    onClick={() => scrollToSection('work')}
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    Work
-                  </button>
-                  <button
-                    onClick={() => scrollToSection('experience')}
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    Experience
-                  </button>
-                  <button
-                    onClick={() => scrollToSection('skills')}
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    Skills
-                  </button>
-                </div>
-                <div className="space-y-3 text-right">
-                  <button
-                    onClick={() => scrollToSection('contact')}
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    Contact
-                  </button>
-                  <a
-                    href={`https://${personalInfo.linkedin}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://github.com/krishnakompalli"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide"
-                  >
-                    Github
-                  </a>
-                </div>
+              <div className="grid grid-cols-2 gap-x-24 gap-y-3">
+                <button
+                  onClick={() => scrollToSection('work')}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  Work
+                </button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  Contact
+                </button>
+                <button
+                  onClick={() => scrollToSection('experience')}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  Experience
+                </button>
+                <a
+                  href={`https://${personalInfo.linkedin}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  LinkedIn
+                </a>
+                <button
+                  onClick={() => scrollToSection('skills')}
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  Skills
+                </button>
+                <a
+                  href="https://github.com/krishnakompalli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium uppercase tracking-wide text-left"
+                >
+                  Github
+                </a>
               </div>
             </motion.div>
           </div>

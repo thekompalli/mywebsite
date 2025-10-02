@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { personalInfo } from '../data/mockData';
 import { useTheme } from '../contexts/ThemeContext';
 import TranslatedText from './TranslatedText';
+import { SmartSearchBar } from './HeroSection';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,6 +54,7 @@ const Header = () => {
               { label: 'nav.capabilities', id: 'skills' },
               { label: 'nav.flyerssoft', id: 'flyers-soft' },
               { label: 'nav.resume', id: 'resume' },
+              { label: 'nav.blogs', id: 'blogs', comingSoon: true },
               { label: 'nav.contact', id: 'contact' }
             ].map((item, index) => (
               <motion.button
@@ -60,10 +62,13 @@ const Header = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                onClick={() => scrollToSection(item.id)}
-                className="text-sm text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium tracking-wider relative group"
+                onClick={() => !item.comingSoon && scrollToSection(item.id)}
+                className={`text-sm text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium tracking-wider relative group ${item.comingSoon ? 'cursor-not-allowed opacity-60' : ''}`}
               >
                 <TranslatedText path={item.label} enableCipher={true} />
+                {item.comingSoon && (
+                  <span className="ml-1.5 text-[10px] bg-gray-200 dark:bg-gray-700 px-1.5 py-0.5 rounded">SOON</span>
+                )}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full"></span>
               </motion.button>
             ))}
@@ -125,19 +130,14 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Contact Info */}
-          <motion.div 
+          {/* Smart Search Bar */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="hidden lg:flex flex-col items-end text-sm"
+            className="hidden lg:block w-64"
           >
-            <a 
-              href={`mailto:${personalInfo.email}`}
-              className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium tracking-wide"
-            >
-              {personalInfo.email.toUpperCase()}
-            </a>
+            <SmartSearchBar />
           </motion.div>
         </div>
 
@@ -156,17 +156,23 @@ const Header = () => {
                 { label: 'nav.capabilities', id: 'skills' },
                 { label: 'nav.flyerssoft', id: 'flyers-soft' },
                 { label: 'nav.resume', id: 'resume' },
+                { label: 'nav.blogs', id: 'blogs', comingSoon: true },
                 { label: 'nav.contact', id: 'contact' }
               ].map((item, index) => (
                 <button
                   key={item.id}
                   onClick={() => {
-                    scrollToSection(item.id);
-                    setIsMobileMenuOpen(false);
+                    if (!item.comingSoon) {
+                      scrollToSection(item.id);
+                      setIsMobileMenuOpen(false);
+                    }
                   }}
-                  className="block w-full text-left py-3 px-4 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium tracking-wide rounded-lg"
+                  className={`block w-full text-left py-3 px-4 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium tracking-wide rounded-lg ${item.comingSoon ? 'cursor-not-allowed opacity-60' : ''}`}
                 >
                   <TranslatedText path={item.label} enableCipher={true} />
+                  {item.comingSoon && (
+                    <span className="ml-2 text-xs bg-gray-200 dark:bg-gray-700 px-2 py-0.5 rounded">SOON</span>
+                  )}
                 </button>
               ))}
               

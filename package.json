@@ -40,6 +40,7 @@
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.12",
+    "fuse.js": "^7.1.0",
     "input-otp": "^1.4.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.507.0",
@@ -49,6 +50,7 @@
     "react-day-picker": "8.10.1",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.2",
+    "react-kawaii": "^1.6.0",
     "react-leaflet": "^5.0.0",
     "react-resizable-panels": "^3.0.1",
     "react-router-dom": "^7.5.1",
@@ -58,6 +60,7 @@
     "svg-pan-zoom": "^3.6.2",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.180.0",
     "vaul": "^1.1.2",
     "zod": "^3.24.4"
   },

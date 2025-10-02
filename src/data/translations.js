@@ -22,7 +22,8 @@ export const translations = {
       capabilities: "CAPABILITIES",
       flyerssoft: "FLYERS SOFT",
       contact: "CONTACT",
-      resume: "RESUME"
+      resume: "RESUME",
+      blogs: "BLOGS"
     },
 
     // Work Section
